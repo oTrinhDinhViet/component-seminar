@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { ListComponent as TeacherList } from './teacher/list/list.component';
 import { ListComponent as StudentList } from './student/list/list.component';
 import { ClassComponent } from './class/class.component';
-import { DetailComponent } from './student/detail/detail.component';
+import { DetailComponent as StudentDetailComponent } from './student/detail/detail.component';
+import { DetailComponent as TeacherDetailComponent } from './teacher/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailComponent } from './student/detail/detail.component';
     TeacherList,
     StudentList,
     ClassComponent,
-    DetailComponent
+    StudentDetailComponent,
+    TeacherDetailComponent
   ],
   imports: [
     BrowserModule,
