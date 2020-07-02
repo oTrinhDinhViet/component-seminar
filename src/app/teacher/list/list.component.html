@@ -1,1 +1,5 @@
-<p>list works!</p>
+<div class="list">
+  <app-teacher-detail [user]="teacher" *ngFor="let teacher of teachers"></app-teacher-detail>
+
+  <p class="noti">Can't delete teacher </p>
+</div>

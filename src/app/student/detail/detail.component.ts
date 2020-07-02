@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Teacher} from "../../teacher/teacher";
-import {Student} from "../student";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Student } from "../student";
 
 @Component({
   selector: 'app-student-detail',
@@ -8,14 +7,16 @@ import {Student} from "../student";
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  user: Student;
+  @Input() user: Student;
+  @Output() deleteRequest = new EventEmitter<number>();
 
   constructor() {
-    this.user = { id:1, name: 'Ngan', age: 30, class: '5A' }
   }
-
 
   ngOnInit(): void {
   }
 
+  onDelete() {
+    this.deleteRequest.emit(this.user.id)
+  }
 }

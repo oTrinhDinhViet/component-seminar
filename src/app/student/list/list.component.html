@@ -1,1 +1,5 @@
-<p>list works!</p>
+<div class="list">
+  <app-student-detail (deleteRequest)="onRemoveStudent($event)" [user]="student" *ngFor="let student of students"></app-student-detail>
+
+  <p class="noti">Click (X) to delete student </p>
+</div>

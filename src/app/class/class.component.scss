@@ -1,0 +1,36 @@
+.content {
+  text-align: center;
+
+  .class-name {
+    text-align: center;
+  }
+}
+
+//::ng-deep p {
+//  color: aqua;
+//}
+
+:host ::ng-deep .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .user-info {
+    width: 100%;
+    display: flex;
+
+
+    p {
+      border: black solid 1px;
+      width: 200px;
+      margin: 0;
+    }
+  }
+
+}
+
+
+//:host ::ng-deep p {
+//  color: aqua;
+//}
