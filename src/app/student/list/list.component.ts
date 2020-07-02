@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Student} from "../student";
+import {StudentService} from "../../student.service";
 
 @Component({
   selector: 'app-student-list',
@@ -9,9 +10,14 @@ import {Student} from "../student";
 export class ListComponent implements OnInit {
   @Input() students: Array<Student>
 
-  constructor() { }
+  constructor(
+    private studentService: StudentService
+  ) { }
 
   ngOnInit(): void {
+    this.studentService.delete$.subscribe((id: number) => {
+      this.onRemoveStudent(id)
+    })
   }
 
   onRemoveStudent(id: number) {

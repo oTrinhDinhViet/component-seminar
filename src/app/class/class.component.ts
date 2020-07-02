@@ -21,10 +21,10 @@ export class ClassComponent implements OnInit {
     ]
 
     this.students = [
-      { id:1, name: 'Student 1', age: 30, class: '' },
-      { id:2, name: 'Student 2', age: 31, class: '' },
-      { id:3, name: 'Student 3', age: 32, class: '' },
-      { id:4, name: 'Student 4', age: 33, class: '' }
+      { id:1, name: 'Student 1', age: 10, class: '' },
+      { id:2, name: 'Student 2', age: 10, class: '' },
+      { id:3, name: 'Student 3', age: 10, class: '' },
+      { id:4, name: 'Student 4', age: 10, class: '' }
     ]
   }
 }
